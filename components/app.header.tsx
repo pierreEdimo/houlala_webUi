@@ -25,14 +25,14 @@ export default function AppHeader({title}: { title?: string }) {
                     <div className={styles.appHeaderContentMenu}>
                         <Link href="/">
                             <div className={styles.iconItem}>
-                                <Image className={styles.imageIcon} src={category} alt="Icon for Category" width={22}
-                                       height={22}/>
+                                <Image className={styles.imageIcon} src={category} alt="Icon for Category" width={20}
+                                       height={20}/>
                                 <p>Categories</p>
                             </div>
                         </Link>
                         <Link href="/">
                             <div className={styles.iconItem}>
-                                <Image src={cart} alt="Icon for Cart" height={22} width={22}/>
+                                <Image src={cart} alt="Icon for Cart" height={20} width={20}/>
                                 <p>Chariot</p>
                             </div>
                         </Link>
