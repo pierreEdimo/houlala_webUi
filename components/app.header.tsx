@@ -18,7 +18,7 @@ export default function AppHeader({title}: { title?: string }) {
                         <form className={styles.searchform}>
                             <input className={styles.searchInput} type="text" placeholder="search"/>
                             <button className={styles.searchButton}>
-                                <Image src={search} width={20} height={20} alt="search logo"/>
+                                <Image src={search} width={18} height={18} alt="search logo"/>
                             </button>
                         </form>
                     </div>
