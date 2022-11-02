@@ -1,0 +1,76 @@
+@import "variables/variables";
+
+.appHeader {
+  height: 95px;
+  width: 100%;
+  background-color: $white;
+}
+
+.logoContainer {
+  display: flex;
+  height: 95px;
+  align-items: center;
+  gap: 40px
+
+}
+
+.appHeaderContent {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appHeaderContentMenu {
+  display: flex;
+  gap: 40px;
+}
+
+.iconSize {
+  font-size: 28px;
+}
+
+.title {
+  font-size: $titleSize;
+}
+
+.searchform {
+  width: 450px;
+  display: flex;
+}
+
+.searchInput {
+  width: 380px;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  border-right: none;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchButton {
+  width: 60px;
+  border-radius: 0 25px 25px 0;
+  border-left: none;
+  background-color: $white;
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.iconItem:hover {
+  text-decoration: underline orange;
+  font-weight: bold;
+}
+
+.iconItem p:hover{
+  color: orange;
+}
