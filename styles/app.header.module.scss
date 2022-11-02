@@ -10,7 +10,7 @@
   display: flex;
   height: 95px;
   align-items: center;
-  gap: 40px
+  gap: 20px
 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .iconSize {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .title {
@@ -67,10 +67,9 @@
 }
 
 .iconItem:hover {
-  text-decoration: underline orange;
-  font-weight: bold;
+  text-decoration: underline;
 }
 
-.iconItem p:hover{
-  color: orange;
+.iconItem p {
+  font-size: 15px;
 }
