@@ -42,9 +42,10 @@
 .searchInput {
   width: 330px;
   padding: 13px;
-  font-size: 18px;
+  font-size: 17px;
   border-radius: 25px 0 0 25px;
-  border-right: none;
+  background-color: $lightgrey;
+  border: none;
 }
 
 .searchInput:focus {
@@ -54,8 +55,9 @@
 .searchButton {
   width: 40px;
   border-radius: 0 25px 25px 0;
-  border-left: none;
-  background-color: $white;
+  background-color: $lightgrey;
+  border: none;
+
 }
 
 .iconItem {
