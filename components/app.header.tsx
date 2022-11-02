@@ -8,6 +8,7 @@ import category from "../public/images/category.png";
 import cart from "../public/images/cart.png";
 import search from "../public/images/search.png";
 
+
 export default function AppHeader({title}: { title?: string }) {
     return (
         <header className={styles.appHeader}>

@@ -1,7 +1,7 @@
 import type {NextPage} from 'next'
 import Head from "next/head";
 import AppHeader from "../components/app.header";
-import NestedLayout from "../components/nested.layout";
+import BottomNavigator from "../components/bottom.navigator";
 
 const title = "Houlala";
 
@@ -16,10 +16,8 @@ const Home: NextPage = () => {
             </Head>
             <AppHeader title={title}/>
             <main>
-                <NestedLayout>
-                    <p>Hello</p>
-                </NestedLayout>
             </main>
+            <BottomNavigator/>
         </div>
     )
 }
