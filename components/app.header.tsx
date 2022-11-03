@@ -7,6 +7,7 @@ import Image from "next/image";
 import category from "../public/images/category.png";
 import cart from "../public/images/cart.png";
 import search from "../public/images/search.png";
+import houlala from "../public/images/Houlala.png";
 
 
 export default function AppHeader({title}: { title?: string }) {
@@ -14,8 +15,11 @@ export default function AppHeader({title}: { title?: string }) {
         <header className={styles.appHeader}>
             <NestedLayout>
                 <div className={styles.appHeaderContent}>
-                    <div className={styles.logoContainer}>
-                        <h4 className={styles.title}>{title}</h4>
+                    <div className={styles.logobox}>
+                        <div className={styles.logoContainer}>
+                            <Image src={houlala} width={90} height={60} alt="logo of Houlala"/>
+                            <h4 className={styles.title}>{title}</h4>
+                        </div>
                         <form className={styles.searchform}>
                             <input className={styles.searchInput} type="text" placeholder="search"/>
                             <button className={styles.searchButton}>
@@ -52,6 +56,17 @@ export default function AppHeader({title}: { title?: string }) {
                     </div>
                 </div>
             </NestedLayout>
+            <div className={styles.mobileAppHeaderContainer}>
+                <div className={styles.mobileAppHeaderContent}>
+                    <div className={styles.logoContainer}>
+                        <Image src={houlala} width={90} height={60} alt="Logo of houlala"/>
+                        <h4 className={styles.title}>{title}</h4>
+                    </div>
+                    <div className={styles.searchContainerButton}>
+                        <Image src={search} height={18} width={18} alt="Logo of the search button"/>
+                    </div>
+                </div>
+            </div>
         </header>
     );
 }
