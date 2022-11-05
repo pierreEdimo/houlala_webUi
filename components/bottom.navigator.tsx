@@ -14,16 +14,16 @@ export default function BottomNavigator() {
             <Link href="/">
                 <Image src={house} width={25} height={25} alt="logo of a house"/>
             </Link>
-            <Link href="/">
+            <Link href="/categories">
                 <Image src={category} width={25} height={25} alt="logo of categories"/>
             </Link>
-            <Link href="/">
+            <Link href="/carts">
                 <Image src={cart} width={25} height={25} alt="logo of a cart"/>
             </Link>
-            <Link href="/">
+            <span>
                 <FontAwesomeIcon className={styles.iconSize} icon={faBell}/>
-            </Link>
-            <Link href="/">
+            </span>
+            <Link href="/user">
                 <FontAwesomeIcon className={styles.iconSize} icon={faUser}/>
             </Link>
         </div>

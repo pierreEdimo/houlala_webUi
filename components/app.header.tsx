@@ -1,25 +1,29 @@
 import styles from "../styles/app.header.module.scss";
 import NestedLayout from "./nested.layout";
 import Link from "next/link";
-import {faBell, faUser} from "@fortawesome/free-regular-svg-icons";
+import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Image from "next/image";
 import category from "../public/images/category.png";
 import cart from "../public/images/cart.png";
 import search from "../public/images/search.png";
 import houlala from "../public/images/Houlala.png";
+import NotificationDropDown from "./notifications.dropdown";
 
 
 export default function AppHeader({title}: { title?: string }) {
+
     return (
         <header className={styles.appHeader}>
             <NestedLayout>
                 <div className={styles.appHeaderContent}>
                     <div className={styles.logobox}>
-                        <div className={styles.logoContainer}>
-                            <Image src={houlala} width={90} height={60} alt="logo of Houlala"/>
-                            <h4 className={styles.title}>{title}</h4>
-                        </div>
+                        <Link href="/">
+                            <div className={styles.logoContainer}>
+                                <Image src={houlala} width={90} height={60} alt="logo of Houlala"/>
+                                <h4 className={styles.title}>{title}</h4>
+                            </div>
+                        </Link>
                         <form className={styles.searchform}>
                             <input className={styles.searchInput} type="text" placeholder="search"/>
                             <button className={styles.searchButton}>
@@ -28,26 +32,24 @@ export default function AppHeader({title}: { title?: string }) {
                         </form>
                     </div>
                     <div className={styles.appHeaderContentMenu}>
-                        <Link href="/">
+                        <Link href="/categories">
                             <div className={styles.iconItem}>
                                 <Image className={styles.imageIcon} src={category} alt="Icon for Category" width={20}
                                        height={20}/>
                                 <p>Categories</p>
                             </div>
                         </Link>
-                        <Link href="/">
+                        <Link href="/carts">
                             <div className={styles.iconItem}>
                                 <Image src={cart} alt="Icon for Cart" height={20} width={20}/>
                                 <p>Chariot</p>
                             </div>
                         </Link>
-                        <Link href="/">
-                            <div className={styles.iconItem}>
-                                <FontAwesomeIcon icon={faBell} className={styles.iconSize}/>
-                                <p>Notifications</p>
-                            </div>
-                        </Link>
-                        <Link href="/">
+                        <div>
+
+                            <NotificationDropDown/>
+                        </div>
+                        <Link href="/user">
                             <div className={styles.iconItem}>
                                 <FontAwesomeIcon icon={faUser} className={styles.iconSize}/>
                                 <p>Mon Compte</p>

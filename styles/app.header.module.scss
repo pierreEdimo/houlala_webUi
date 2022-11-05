@@ -17,7 +17,7 @@
   display: flex;
   height: inherit;
   align-items: center;
-
+  cursor: pointer;
 }
 
 .appHeaderContent {
@@ -106,6 +106,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media (max-width: 1095px) {
+  .iconSize{
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1095px) {
