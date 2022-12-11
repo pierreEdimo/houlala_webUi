@@ -1,7 +1,10 @@
 import type {NextPage} from 'next'
 import Head from "next/head";
-import AppHeader from "../components/app.header";
-import BottomNavigator from "../components/bottom.navigator";
+import {HomeCategoryList} from "../components/home.category.list";
+import {HomeProductList} from "../components/home.product.list";
+import {HomeLocationList} from "../components/home.location.list";
+import {NestedLayout} from "../components/nested.layout";
+
 
 const title = "Houlala";
 
@@ -14,10 +17,15 @@ const Home: NextPage = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{title}</title>
             </Head>
-            <AppHeader title={title}/>
             <main>
+                <NestedLayout>
+                    <HomeCategoryList/>
+                    <br/>
+                    <HomeProductList/>
+                    <br/>
+                    <HomeLocationList/>
+                </NestedLayout>
             </main>
-            <BottomNavigator/>
         </div>
     )
 }

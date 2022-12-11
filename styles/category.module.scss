@@ -1,0 +1,16 @@
+.title{
+  font-weight: bolder;
+  font-size: 18px;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.homeCategoryContainer {
+  display: flex;
+  height: 150px;
+  overflow: auto;
+  white-space: nowrap;
+}

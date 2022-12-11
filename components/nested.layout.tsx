@@ -1,9 +1,10 @@
-import styles from '../styles/nested.layout.module.scss';
+import React from "react";
+import styles from "../styles/layout.module.scss"
 
-export default function NestedLayout({children}: any) {
+export function NestedLayout({children}: { children: React.ReactNode }) {
     return (
-        <div className={styles.container}>
+        <div className={styles.layoutContainer}>
             {children}
         </div>
-    );
+    )
 }

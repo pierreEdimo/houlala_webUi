@@ -1,0 +1,15 @@
+.horizontalList{
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.smallTitle{
+  color: #d4d4d4;
+}
+
+.productTitle{
+   font-weight: bolder;
+}
