@@ -3,10 +3,11 @@ import {Location} from "../types/location";
 import styles from "../styles/location.module.scss";
 import {Avatar} from "./avatar";
 
-export function HorizontalLocationContainer({location}: {location: Location}){
+export function HorizontalLocationContainer({location}: { location: Location }) {
     return (
-        <BorderedCard>
-            <div className={styles.imageContainer} >
+        <BorderedCard
+            width={125}>
+            <div className={styles.imageContainer}>
                 <Avatar
                     imageUrl={location.imageUrl}
                     width={60}

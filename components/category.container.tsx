@@ -5,7 +5,7 @@ import styles from "../styles/category.module.scss";
 
 export function CategoryContainer({category}: { category: Category }) {
     return (
-        <Card>
+        <Card width={75}>
             <Avatar width={80}
                     height={80}
                     imageUrl={category.imageUrl}/>

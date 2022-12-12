@@ -1,7 +1,7 @@
 import '../styles/globals.scss'
 import type {AppProps} from 'next/app'
 import {RecoilRoot} from "recoil";
-import houlala from "../public/images/Houlala.png";
+import houlala from "../public/images/houlala1.png";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -22,8 +22,8 @@ function MyApp({Component, pageProps}: AppProps) {
                         <div className="title-container">
                             <Image src={houlala}
                                    alt="houlal-logo"
-                                   width={100}
-                                   height={75}
+                                   width={120}
+                                   height={80}
                             />
                             <h1>Houlala</h1>
                         </div>
@@ -44,19 +44,19 @@ function MyApp({Component, pageProps}: AppProps) {
                <NestedLayout>
                    <div className="bottom-bar-content">
                        <Link href="/">
-                           <Image src={house} width={30} height={30} alt="house-image" />
+                           <Image src={house} width={25} height={25} alt="house-image" />
                        </Link>
                        <Link href="/">
-                           <Image src={category} width={30} height={30} alt="category-image"/>
+                           <Image src={category} width={25} height={25} alt="category-image"/>
                        </Link>
                        <Link href="/">
-                           <Image src={cart} width={30} height={30} alt="corbeille-image"/>
+                           <Image src={cart} width={25} height={25} alt="corbeille-image"/>
                        </Link>
                        <Link href="/">
-                           <Image src={bell} width={30} height={30} alt="notification-image"/>
+                           <Image src={bell} width={25} height={25} alt="notification-image"/>
                        </Link>
                        <Link href="/">
-                           <Image src={user} width={30} height={30} alt="user-image"/>
+                           <Image src={user} width={25} height={25} alt="user-image"/>
                        </Link>
                    </div>
                </NestedLayout>
