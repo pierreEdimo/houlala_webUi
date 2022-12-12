@@ -14,6 +14,5 @@ export function HomeCategoryList() {
                 ))}
             </div>
         </div>
-
-    )
+    );
 }

@@ -12,10 +12,20 @@ import category from "../public/images/category.png";
 import cart from "../public/images/cart.png";
 import bell from "../public/images/notification.png";
 import user from "../public/images/user.png";
+import Head from "next/head";
 
 function MyApp({Component, pageProps}: AppProps) {
+
+    const title = "Houlala";
+
     return (
         <RecoilRoot>
+            <Head>
+                <meta charSet="UTF-8"/>
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title>{title}</title>
+            </Head>
             <header className="app-header">
                 <NestedLayout>
                     <div className="app-header-content">
@@ -46,16 +56,16 @@ function MyApp({Component, pageProps}: AppProps) {
                        <Link href="/">
                            <Image src={house} width={25} height={25} alt="house-image" />
                        </Link>
-                       <Link href="/">
+                       <Link href="/discover">
                            <Image src={category} width={25} height={25} alt="category-image"/>
                        </Link>
-                       <Link href="/">
+                       <Link href="/cart">
                            <Image src={cart} width={25} height={25} alt="corbeille-image"/>
                        </Link>
-                       <Link href="/">
+                       <Link href="/notification">
                            <Image src={bell} width={25} height={25} alt="notification-image"/>
                        </Link>
-                       <Link href="/">
+                       <Link href="/user">
                            <Image src={user} width={25} height={25} alt="user-image"/>
                        </Link>
                    </div>

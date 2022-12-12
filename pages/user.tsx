@@ -1,11 +1,11 @@
 import {NextPage} from "next";
 
-const Cart: NextPage = () => {
+const User: NextPage = () => {
     return (
         <div>
-            <p>Cart Works</p>
+            <p>User Works</p>
         </div>
     )
 }
 
-export default Cart; 
+export default User; 
