@@ -4,11 +4,11 @@ import styles from "../styles/category.module.scss";
 
 export function GridCategoryContainer({category}: { category: Category }) {
     return (
-            <div className={styles.categoryCategoryContainer}>
+        <div className={styles.categoryContainer}>
             <Avatar imageUrl={category.imageUrl}
                     width={90}
                     height={90}/>
-            <span className={styles.title}>{category.name}</span>
+            <h3 className={styles.title}>{category.name}</h3>
         </div>
     );
 }
