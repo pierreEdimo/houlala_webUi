@@ -4,7 +4,8 @@ import {ProductContainer} from "./product.container";
 
 
 export function HomeProductList() {
-    const productList = useProductList("https://api.houlala.store/marketplace/products");
+    const PRODUCT_URL = process.env.NEXT_PUBLIC_PRODUCT_URL;
+    const productList = useProductList(`${PRODUCT_URL}`);
 
     return (
         <div>
@@ -13,7 +14,7 @@ export function HomeProductList() {
                 {
                     productList.map((product) => (
                         <ProductContainer key={product._id} product={product}/>
-                    ) )
+                    ))
                 }
             </div>
         </div>
