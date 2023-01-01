@@ -17,7 +17,7 @@ export function AppBar({title}: { title: string }) {
                                width={120}
                                height={80}
                         />
-                        <h1>{title}</h1>
+                        <h2>{title}</h2>
                     </div>
                     <Link href="/">
                         <div className={styles.buttonContainer}>
