@@ -3,7 +3,8 @@ import styles from "../styles/category.module.scss";
 import {CategoryContainer} from "./category.container";
 
 export function HomeCategoryList() {
-    const categoryList = useCategoryList("https://api.houlala.store/marketplace/categories");
+    const CATEGORY_URL = process.env.NEXT_PUBLIC_CATEGORY_URL;
+    const categoryList = useCategoryList(`${CATEGORY_URL}`);
 
     return (
         <div>
