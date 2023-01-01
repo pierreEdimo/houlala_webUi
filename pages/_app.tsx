@@ -13,6 +13,7 @@ import cart from "../public/images/cart.png";
 import bell from "../public/images/notification.png";
 import user from "../public/images/user.png";
 import Head from "next/head";
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 function MyApp({Component, pageProps}: AppProps) {
 
@@ -26,29 +27,6 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>{title}</title>
             </Head>
-            <header className="app-header">
-                <NestedLayout>
-                    <div className="app-header-content">
-                        <div className="title-container">
-                            <Image src={houlala}
-                                   alt="houlal-logo"
-                                   width={120}
-                                   height={80}
-                            />
-                            <h1>Houlala</h1>
-                        </div>
-                        <Link href="/">
-                            <div className="button-container">
-                                <Image src={search}
-                                       alt="search-icon"
-                                       width={20}
-                                       height={20}
-                                />
-                            </div>
-                        </Link>
-                    </div>
-                </NestedLayout>
-            </header>
             <Component {...pageProps} />
             <footer className="bottom-bar">
                <NestedLayout>
