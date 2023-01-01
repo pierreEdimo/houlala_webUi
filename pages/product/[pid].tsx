@@ -8,7 +8,7 @@ import {NestedLayout} from "../../components/nested.layout";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import {faChevronLeft, faBagShopping} from "@fortawesome/free-solid-svg-icons";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 
 const Product: NextPage = () => {
@@ -48,10 +48,14 @@ const Product: NextPage = () => {
                                 <p style={{margin: "0"}}>Vendeur: <b>{product.locationName}</b></p>
                             </div>
                             <div className={styles.buttonContainer}>
-                                <button>Ajouter au panier</button>
+                                <button>
+                                    <FontAwesomeIcon icon={faBagShopping}/>
+                                    <p>Ajouter au panier</p>
+                                    <div></div>
+                                </button>
                                 <button>
                                     <FontAwesomeIcon icon={faHeart}/>
-                                    <p>Ajouter au favori</p>
+                                    <p>Ajouter aux favoris</p>
                                     <div></div>
                                 </button>
                             </div>
@@ -103,8 +107,16 @@ const Product: NextPage = () => {
                             <p style={{margin: "0"}}>Vendeur: <b>{product.locationName}</b></p>
                         </div>
                         <div className={styles.buttonContainer}>
-                            <button>Ajouter au panier</button>
-                            <button>Ajouter dans les favoris</button>
+                            <button>
+                                <FontAwesomeIcon icon={faBagShopping}/>
+                                <p>Ajouter au panier</p>
+                                <div></div>
+                            </button>
+                            <button>
+                                <FontAwesomeIcon icon={faHeart}/>
+                                <p>Ajouter aux favoris</p>
+                                <div></div>
+                            </button>
                         </div>
                     </div>
                     <ReactMarkdown>
