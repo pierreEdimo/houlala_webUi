@@ -1,6 +1,8 @@
 import {useRecoilState} from "recoil";
 import {ProductListState} from "../atoms/product.list.state";
 import {useEffect} from "react";
+import {ProductState} from "../atoms/product.state";
+import {json} from "stream/consumers";
 
 export function useProductList(url: string) {
     const [productList, setProductList] = useRecoilState(ProductListState);
@@ -12,4 +14,16 @@ export function useProductList(url: string) {
     }, [setProductList, url]);
 
     return productList;
+}
+
+export function useProduct(url: string) {
+    const [product, setProduct] = useRecoilState(ProductState);
+
+    useEffect(() => {
+        fetch(url)
+            .then((response) => response.json())
+            .then((json) => setProduct(json))
+    }, [setProduct, url]);
+
+    return product;
 }
