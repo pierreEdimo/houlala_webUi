@@ -9,6 +9,7 @@ import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import {faHeart} from "@fortawesome/free-regular-svg-icons";
 
 const Product: NextPage = () => {
     const router = useRouter();
@@ -48,7 +49,11 @@ const Product: NextPage = () => {
                             </div>
                             <div className={styles.buttonContainer}>
                                 <button>Ajouter au panier</button>
-                                <button>Ajouter dans les favoris</button>
+                                <button>
+                                    <FontAwesomeIcon icon={faHeart}/>
+                                    <p>Ajouter au favori</p>
+                                    <div></div>
+                                </button>
                             </div>
                         </div>
                     </div>
