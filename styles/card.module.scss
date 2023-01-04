@@ -1,16 +1,4 @@
-.cardContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.borderedCardContainer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.cardContainer{
   padding: 20px;
   border: 1px #d3d3d3 solid;
   border-radius: 5px;
