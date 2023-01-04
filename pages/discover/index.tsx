@@ -1,14 +1,13 @@
 import {NextPage} from "next"
-import {CategoryList} from "../../components/category.list";
 import {NestedLayout} from "../../components/nested.layout";
-import {AppBar} from "../../components/app.bar";
+import { CategoryGrid } from "../../components/category.grid";
 
 const Index: NextPage = () => {
     return (
         <div>
-            <AppBar title={"Decouvrez"}/>
             <NestedLayout>
-                <CategoryList/>
+                <h2>Decouvrez nos produits par Categories</h2>
+                <CategoryGrid/>
             </NestedLayout>
         </div>
     )
