@@ -11,14 +11,16 @@ export function AppBar({title}: { title: string }) {
         <header className={styles.appHeader}>
             <NestedLayout>
                 <div className={styles.appHeaderContent}>
-                    <div className={styles.titleContainer}>
-                        <Image src={houlala}
-                               alt="houlal-logo"
-                               width={120}
-                               height={80}
-                        />
-                        <h2>{title}</h2>
-                    </div>
+                    <Link href={"/"}>
+                        <div className={styles.titleContainer}>
+                            <Image src={houlala}
+                                alt="houlal-logo"
+                                width={120}
+                                height={80}
+                            />
+                            <h2>{title}</h2>
+                        </div>
+                    </Link>
                     <Link href="/">
                         <div className={styles.buttonContainer}>
                             <Image src={search}
