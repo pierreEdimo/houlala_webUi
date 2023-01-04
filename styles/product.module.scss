@@ -1,5 +1,11 @@
+.productGrid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
 .imageContainer {
-  width: 100%;
   height: 190px;
   position: relative;
   background-color: rgb(236, 236, 236);
@@ -8,6 +14,10 @@
 
 .productContainer {
   cursor: pointer;
+  background-color: rgb(236, 236, 236);
+  position: relative;
+  height: 210px;
+  border-radius: 5px;
 }
 
 .homeProductListContainer {
@@ -102,7 +112,7 @@
 }
 
 @media screen and (min-width: 991px) {
-  .imageContainer {
+  .productContainer {
     height: 260px;
   }
 
@@ -151,10 +161,10 @@
     justify-content: space-between;
   }
 
-   .mobileInfoProductContainer{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+  .mobileInfoProductContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .buttonContainer {
@@ -166,6 +176,11 @@
   .mobileProductPageContainer {
     display: none;
   }
+}
 
+@media screen and (max-width: 600px) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+  }
 
 }
