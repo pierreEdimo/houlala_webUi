@@ -1,15 +1,22 @@
 import {Category} from "../types/category";
-import {Card} from "./card";
-import {Avatar} from "./avatar";
 import styles from "../styles/category.module.scss";
+import Container from "./container";
+import Link from "next/link";
+import Avatar from "./avatar";
 
 export function CategoryContainer({category}: { category: Category }) {
     return (
-        <Card width={75}>
-            <Avatar width={80}
-                    height={80}
-                    imageUrl={category.imageUrl}/>
-            <span className={styles.title}>{category.name}</span>
-        </Card>
+        <>
+            <Container>
+                <Link href={`/category/${category._id}`}>
+                    <div style={{cursor: "pointer"}}>
+                        <div className={styles.avatarContainer}>
+                            <Avatar imageUrl={category.imageUrl} type={"thumbnail"}/>
+                        </div>
+                        <h3 className={styles.title}>{category.name}</h3>
+                    </div>
+                </Link>
+            </Container>
+        </>
     )
 }
