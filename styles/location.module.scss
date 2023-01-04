@@ -12,4 +12,35 @@
 
 .productTitle{
    font-weight: bolder;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 130px;
+   text-align: center;
+}
+
+.imageContainer{
+    width: 80px;
+    height: 80px;
+}
+
+.locationContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .imageContainer{
+        width: 60px;
+        height: 60px;
+    }
+    .locationContainer{
+        width: 150px;
+        height:150px;
+    }
 }
