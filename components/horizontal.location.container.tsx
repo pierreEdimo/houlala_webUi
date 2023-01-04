@@ -1,23 +1,25 @@
-import {BorderedCard} from "./border.card";
 import {Location} from "../types/location";
 import styles from "../styles/location.module.scss";
-import {Avatar} from "./avatar";
+import Avatar from "./avatar";
+import {Card} from "./card";
 
 export function HorizontalLocationContainer({location}: { location: Location }) {
     return (
-        <BorderedCard
-            width={125}>
-            <div className={styles.imageContainer}>
-                <Avatar
-                    imageUrl={location.imageUrl}
-                    width={60}
-                    height={60}
-                />
-            </div>
-            <div style={{height: 10}}></div>
-            <h3 className={styles.productTitle}>{location.name}</h3>
-            <h4 className={styles.smallTitle}>{location.category.name}</h4>
-            <h5 className={styles.smallTitle}>{location.address.city}</h5>
-        </BorderedCard>
+        <>
+            <Card>
+                <div className={styles.locationContainer}>
+                    <div className={styles.imageContainer}>
+                        <Avatar
+                            imageUrl={location.imageUrl}
+                            type={"avatar"}
+                        />
+                    </div>
+                    <div style={{height: 10}}></div>
+                    <h3 className={styles.productTitle}>{location.name}</h3>
+                    <h4 className={styles.smallTitle}>{location.category.name}</h4>
+                    <h5 className={styles.smallTitle}>{location.address.city}</h5>
+                </div>
+            </Card>
+        </>
     );
 }
