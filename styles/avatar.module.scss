@@ -1,5 +1,13 @@
+.avatarContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .avatar {
-  vertical-align: middle;
   border-radius: 50%;
-  background-color: rgb(236, 236, 236);
+}
+
+.thumbnail {
+  border-radius: 5px;
 }
