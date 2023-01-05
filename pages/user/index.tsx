@@ -1,10 +1,13 @@
 import {NextPage} from "next";
+import {NestedLayout} from "../../components/nested.layout";
 
 const Index: NextPage = () => {
     return (
-        <div>
-            <p>User Works</p>
-        </div>
+        <>
+            <NestedLayout>
+                <p>User Works</p>
+            </NestedLayout>
+        </>
     )
 }
 
