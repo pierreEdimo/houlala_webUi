@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import {useRecoilState} from "recoil";
 import {CategoryListState} from "../atoms/category.list.state";
 
-export function useCategoryList(url: string) {
+function useCategoryList(url: string) {
     const [categoryList, setCategoryList] = useRecoilState(CategoryListState);
 
     useEffect(() => {

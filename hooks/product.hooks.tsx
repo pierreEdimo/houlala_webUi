@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {ProductState} from "../atoms/product.state";
 import {json} from "stream/consumers";
 
-export function useProductList(url: string) {
+function useProductList(url: string) {
     const [productList, setProductList] = useRecoilState(ProductListState);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export function useProductList(url: string) {
     return productList;
 }
 
-export function useProduct(url: string) {
+function useProduct(url: string) {
     const [product, setProduct] = useRecoilState(ProductState);
 
     useEffect(() => {
@@ -27,3 +27,4 @@ export function useProduct(url: string) {
 
     return product;
 }
+
