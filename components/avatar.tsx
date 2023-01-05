@@ -1,13 +1,13 @@
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import avatarStyles from "../styles/avatar.module.scss";
 import React from "react";
 
 type AvatarProps = {
-    imageUrl: string;
+    imageUrl: string | StaticImageData;
     type: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({imageUrl, type}: { imageUrl: string, type: string }) => {
+const Avatar: React.FC<AvatarProps> = ({imageUrl, type}: { imageUrl: string | StaticImageData, type: string }) => {
     switch (type) {
         case "thumbnail":
             return (
