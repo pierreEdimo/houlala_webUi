@@ -13,7 +13,7 @@ const SubCategoryContainer: React.FC<SubCategoryContainerProps> = ({subCategory}
     return (
         <>
             <Card>
-                <Link href={"/"}>
+                <Link href={`/sub-category/${subCategory._id}`}>
                     <div className={styles.subCategoryContainer}>
                         <div className={styles.imageThumbnail}>
                             <Avatar imageUrl={subCategory.thumbNailUrl} type={"avatar"}/>
