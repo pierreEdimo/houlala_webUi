@@ -1,6 +1,8 @@
 import React from "react";
 import {useCategory} from "../swrHooks/category.hooks";
 import FruitsLettuces from "./fruits.lettuces";
+import NoProducts from "./no.products";
+import BackButton from "./back.button";
 
 type CategoryDetailProps = {
     categoryId: string;
@@ -21,7 +23,14 @@ const CategoryDetail: React.FC<CategoryDetailProps> = ({categoryId}: { categoryI
                 </>
             )
         default:
-            return <div>No Products</div>
+            return (
+                <>
+                    <BackButton title={`${category?.name}`}/>
+                    <NoProducts
+                        errorMessage={`Desole nous n'avons pas encore de produit dans la categorie ${category?.name}\n.
+                Nous travaillons tres dure pour ameliorer nos services.\n Svp reessayez plutard.`}/>
+                </>
+            )
     }
 }
 
