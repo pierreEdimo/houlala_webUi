@@ -3,6 +3,7 @@ import styles from "../styles/fruits.lettuces.module.scss";
 import {useSubCategoryList} from "../swrHooks/sub.category.hooks";
 import SubCategoryContainer from "./sub.category.container";
 import ProductGrid from "./product.grid";
+import BackButton from "./back.button";
 
 type FruitsLettucesProps = {
     categoryId: string,
@@ -23,7 +24,7 @@ const FruitsLettuces: React.FC<FruitsLettucesProps> = ({categoryId, name}: { cat
     return (
         <>
             <div className={styles.fruitLettucesContainer}>
-                <h2>{name}</h2>
+                <BackButton title={name}/>
                 <div className={styles.subCategoryList}>
                     {categories?.map((category) => (
                         <SubCategoryContainer key={category._id} subCategory={category}/>
