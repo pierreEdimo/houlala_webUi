@@ -9,6 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft, faBagShopping} from "@fortawesome/free-solid-svg-icons";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {useProduct} from "../../swrHooks/product.hooks";
+import BackButton from "../../components/back.button";
 
 const Product: NextPage = () => {
     const router = useRouter();
@@ -23,11 +24,9 @@ const Product: NextPage = () => {
     return (
         <>
             <NestedLayout>
+                <BackButton title={product?.name!}/>
+                <div style={{height: "10px"}}></div>
                 <div className={styles.productPageContainer}>
-                    <span style={{
-                        fontWeight: "bolder",
-                        fontSize: "32px"
-                    }}>{product!.name}</span>
                     <div className={styles.productPage}>
                         <div className={styles.productImageContainer}>
                             <div className={styles.productImage}>
@@ -68,26 +67,6 @@ const Product: NextPage = () => {
                     </ReactMarkdown>
                 </div>
                 <div className={styles.mobileProductPageContainer}>
-                    <div style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "5px"
-                    }}>
-                        <div onClick={() => router.back()}
-                             style={{
-                                 backgroundColor: "#ffffff",
-                                 borderRadius: "50%",
-                                 width: "30px", height: "30px",
-                                 display: "flex", alignItems: "center",
-                                 justifyContent: "center"
-                             }}>
-                            <FontAwesomeIcon icon={faChevronLeft} className={styles.Icon}/>
-                        </div>
-                        <span style={{
-                            fontWeight: "bold",
-                            fontSize: "22px"
-                        }}>{product!.name}</span>
-                    </div>
                     <div className={styles.productImageContainer}>
                         <div className={styles.productImage}>
                             <Image src={product!.imageUrl}
