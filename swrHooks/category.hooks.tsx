@@ -22,4 +22,4 @@ function useCategory(categoryUrl: string) {
     };
 }
 
-export {useCategoryList, useCategory}
+export {useCategoryList, useCategory}; 
