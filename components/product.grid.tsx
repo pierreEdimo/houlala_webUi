@@ -2,27 +2,43 @@ import React from "react";
 import styles from "../styles/product.module.scss";
 import {useProductList} from "../swrHooks/product.hooks";
 import {ProductContainer} from "./product.container";
+import Spinner from "./spinner";
+import NoProducts from "./no.products";
 
 type ProductGridProps = {
     url: string;
 }
 
-const ProductGrid = ({url}: {url: string}) => {
-    const {products,  isLoading, isError} = useProductList(url);
+const ProductGrid = ({url}: { url: string }) => {
+    const {products, isLoading, isError} = useProductList(url);
 
-    if(isLoading) return <div>...loading</div>
+    if (isLoading) return (
+        <>
+            <div>
+                <Spinner/>
+            </div>
+        </>
+    )
+
     if (isError) return <div>...Error</div>
 
     return (
-            <>
-            <div className={styles.productGrid}>
-                {
-                    products?.map((product) => (
-                            <ProductContainer key={product._id} product={product}/>
-                    ))
-                }
-            </div>
-            </>
+        <>
+            {
+                products?.length! < 1 ?
+                    <div>
+                        <NoProducts errorMessage={`Desole nous n'avons pas encore de produit de cette categorie\n.
+                Nous travaillons tres dure pour ameliorer nos services.\n Svp reessayez plutard.`}/>
+                    </div> :
+                    <div className={styles.productGrid}>
+                        {
+                            products?.map((product) => (
+                                <ProductContainer key={product._id} product={product}/>
+                            ))
+                        }
+                    </div>
+            }
+        </>
     )
 }
 
