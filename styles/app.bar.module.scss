@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 .appHeader {
   height: 110px;
   width: 100%;
@@ -26,4 +28,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.desktopAppHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textSearch {
+  padding: 10px;
+  width: 300px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.searchButton {
+  padding: 12px;
+  border: none;
+  background-color: #ffffff;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+}
+
+.searchPreview{
+    background: red;
+    margin-top: 10px;
+    border: 2px solid #f9f9f9;
+    border-radius: 10px;
+    height: 320px;
+    z-index: 1;
+    position: absolute;
+    width: 330px;
+    padding: 10px;
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .appHeaderContent {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .desktopAppHeaderContent {
+    display: none;
+  }
 }
