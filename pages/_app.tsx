@@ -14,7 +14,7 @@ import bell from "../public/images/notification.png";
 import user from "../public/images/user.png";
 import Head from "next/head";
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import {AppBar} from "../components/app.bar";
+import AppBar from '../components/app.bar';
 
 function MyApp({Component, pageProps}: AppProps) {
 
