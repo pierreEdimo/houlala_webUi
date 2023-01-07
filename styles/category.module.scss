@@ -24,13 +24,14 @@
   display: flex;
   flex-direction: column;
   height: 220px;
+  cursor: pointer;
 }
 
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  column-gap: 10px;
   row-gap: 20px;
+  column-gap: 10px;
   padding: 10px;
 }
 
@@ -51,3 +52,14 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .categoryTitle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .backButtonContainer {
+    display: none;
+  }
+}
