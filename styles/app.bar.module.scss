@@ -54,17 +54,17 @@
   cursor: pointer;
 }
 
-.searchPreview{
-    background: red;
-    margin-top: 10px;
-    border: 2px solid #f9f9f9;
-    border-radius: 10px;
-    height: 320px;
-    z-index: 1;
-    position: absolute;
-    width: 330px;
-    padding: 10px;
-    display: none;
+.searchPreview {
+  background: #ffffff;
+  margin-top: 10px;
+  border: 2px solid #f9f9f9;
+  border-radius: 10px;
+  height: 320px;
+  z-index: 1;
+  position: absolute;
+  width: 330px;
+  padding: 10px;
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
