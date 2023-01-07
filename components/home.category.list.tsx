@@ -1,6 +1,6 @@
 import styles from "../styles/category.module.scss";
 import {useCategoryList} from "../swrHooks/category.hooks";
-import {CategoryContainer} from "./category.container";
+import CategoryContainer from "./category.container";
 
 export function HomeCategoryList() {
     const CATEGORY_URL = process.env.NEXT_PUBLIC_CATEGORY_URL;
