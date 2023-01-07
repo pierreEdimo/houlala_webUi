@@ -3,8 +3,13 @@ import styles from "../styles/category.module.scss";
 import Container from "./container";
 import Link from "next/link";
 import Avatar from "./avatar";
+import React from "react";
 
-export function CategoryContainer({category}: { category: Category }) {
+type CategoryContainerProps = {
+    category: Category
+}
+
+const CategoryContainer: React.FC<CategoryContainerProps> = ({category}: { category: Category }) => {
     return (
         <>
             <Container>
@@ -20,3 +25,5 @@ export function CategoryContainer({category}: { category: Category }) {
         </>
     )
 }
+
+export default CategoryContainer;
