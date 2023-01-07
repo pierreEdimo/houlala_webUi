@@ -1,15 +1,15 @@
 import {NextPage} from "next";
 import styles from "../../styles/product.module.scss";
 import {useRouter} from "next/router";
-import {AppBar} from "../../components/app.bar";
 import {NestedLayout} from "../../components/nested.layout";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronLeft, faBagShopping} from "@fortawesome/free-solid-svg-icons";
+import {faBagShopping} from "@fortawesome/free-solid-svg-icons";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {useProduct} from "../../swrHooks/product.hooks";
 import BackButton from "../../components/back.button";
+import Spinner from "../../components/spinner";
 
 const Product: NextPage = () => {
     const router = useRouter();
@@ -17,7 +17,11 @@ const Product: NextPage = () => {
     const PRODUCT_Url = process.env.NEXT_PUBLIC_PRODUCT_URL;
     const {product, isLoading, isError} = useProduct(`${PRODUCT_Url}/${pid}`);
 
-    if (isLoading) return <div>...Loading</div>
+    if (isLoading) return (
+        <div>
+            <Spinner/>
+        </div>
+    )
 
     if (isError) return <div>...Error</div>
 
