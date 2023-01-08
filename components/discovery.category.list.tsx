@@ -3,6 +3,7 @@ import {useCategoryList} from "../swrHooks/discovery.category.hooks";
 import Spinner from "./spinner";
 import styles from "../styles/category.module.scss";
 import SubCategoryContainer from "./sub.category.container";
+import {useRouter} from "next/router";
 
 type DiscoveryCategoryListProps = {}
 
@@ -10,6 +11,7 @@ type DiscoveryCategoryListProps = {}
 const DiscoveryCategoryList: React.FC<DiscoveryCategoryListProps> = () => {
     const CATEGORY_URL = process.env.NEXT_PUBLIC_DISCOVERY_CATEGORY_URL;
     const {categories, isError, isLoading} = useCategoryList(`${CATEGORY_URL}/store`);
+    const router = useRouter();
 
     if (isLoading) return (
         <>
@@ -26,7 +28,7 @@ const DiscoveryCategoryList: React.FC<DiscoveryCategoryListProps> = () => {
                     <SubCategoryContainer key={category.id}
                                           label={category.name}
                                           thumbNailUrl={category.thumbNail}
-                                          onClick={() => console.log("Hello")}/>
+                                          onClick={() => router.push(`/store-category/${category.id}`)}/>
                 ))}
             </div>
         </>
