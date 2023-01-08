@@ -1,3 +1,5 @@
+import {Creator} from "./creator";
+
 export type Product = {
     _id: string,
     name: string,
@@ -13,4 +15,5 @@ export type Product = {
     originLabel: string,
     productSku: string,
     locationName: string,
+    creator: Creator
 }
