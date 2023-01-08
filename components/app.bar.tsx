@@ -15,6 +15,8 @@ import user from "../public/images/user.png";
 import {useRouter} from "next/router";
 import {useRecoilState} from "recoil";
 import {PreviewState} from "../atoms/preview.state";
+import NotificationDropdown from "./notification.dropdown";
+import OptionsDropdown from "./options.dropdown";
 
 
 const AppBar = ({title}: { title: string }) => {
@@ -86,8 +88,8 @@ const AppBar = ({title}: { title: string }) => {
                     <div style={{display: "flex", gap: "20px"}}>
                         <ButtonContainer onClick={() => router.push('/discover')} imageSrc={category}/>
                         <ButtonContainer onClick={() => router.push('/cart')} imageSrc={cart}/>
-                        <ButtonContainer imageSrc={bell}/>
-                        <ButtonContainer imageSrc={user}/>
+                        <NotificationDropdown/>
+                        <OptionsDropdown/>
                     </div>
                 </div>
             </NestedLayout>
