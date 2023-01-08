@@ -44,7 +44,7 @@ const Location: NextPage = () => {
                         <Avatar imageUrl={location?.imageUrl!} type={"avatar"}/>
                     </div>
                     <div>
-                        <h2 style={{fontSize: "32px"}}>{location?.name}</h2>
+                        <h2 className={styles.locationTitle}>{location?.name}</h2>
                         <div className={styles.keyFigures}>
                             <p>{`${location?.productTotalCount} produits disponibles`}</p>
                             <p>{`${location?.orderSoldCount} produits vendus`}</p>
