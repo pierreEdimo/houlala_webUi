@@ -1,11 +1,9 @@
 import '../styles/globals.scss'
 import type {AppProps} from 'next/app'
 import {RecoilRoot} from "recoil";
-import houlala from "../public/images/houlala1.png";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import search from "../public/images/search.png";
 import {NestedLayout} from "../components/nested.layout";
 import house from "../public/images/house.png";
 import category from "../public/images/category.png";
@@ -26,8 +24,6 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <link rel="manifest" href="/manifest.json" />
-                <meta name="theme-color" content="#f69435" />
                 <title>{title}</title>
             </Head>
             <AppBar title={"Houla la"}/>
