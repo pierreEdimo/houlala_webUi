@@ -24,7 +24,7 @@ const VerticalLocationContainer: React.FC<VerticalLocationProps> = ({location}) 
                             <h3 className={styles.title}>{location.name}</h3>
                             <h4 className={styles.smallTitle}>{location.category.name}</h4>
                             <h5 className={styles.smallTitle}>{location.address.city}</h5>
-                            <p className={styles.descriptionText}>{location.description}</p>
+                            <p className={styles.descriptionText}>{location.shortDescription}</p>
                         </div>
                     </div>
                 </Link>
