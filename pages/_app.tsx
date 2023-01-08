@@ -26,6 +26,8 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link rel="manifest" href="/manifest.json" />
+                <meta name="theme-color" content="#f69435" />
                 <title>{title}</title>
             </Head>
             <AppBar title={"Houla la"}/>
