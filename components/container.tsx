@@ -1,4 +1,3 @@
-import styles from "../styles/container.module.scss";
 import React from "react";
 
 type ContainerProps = {
@@ -7,7 +6,7 @@ type ContainerProps = {
 
 const Container: React.FC<ContainerProps> = ({children}: { children: React.ReactNode }) => {
     return <>
-        <div className={styles.container}>
+        <div>
             {children}
         </div>
     </>
