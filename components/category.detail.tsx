@@ -1,10 +1,11 @@
 import React from "react";
 import {useCategory} from "../swrHooks/category.hooks";
 import FruitsLettuces from "./fruits.lettuces";
-import NoProducts from "./no.products";
+import NoItems from "./no.items";
 import BackButton from "./back.button";
 import StoreContainer from "./store.container";
 import Spinner from "./spinner";
+import stock from "../public/images/stock.png";
 
 type CategoryDetailProps = {
     categoryId: string;
@@ -39,7 +40,8 @@ const CategoryDetail: React.FC<CategoryDetailProps> = ({categoryId}: { categoryI
             return (
                 <>
                     <BackButton title={`${category?.name}`}/>
-                    <NoProducts
+                    <NoItems
+                        iconImage={stock}
                         errorMessage={`Desole nous n'avons pas encore de produit dans la categorie ${category?.name}\n.
                 Nous travaillons tres dure pour ameliorer nos services.\n Svp reessayez plutard.`}/>
                 </>
