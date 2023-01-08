@@ -20,4 +20,5 @@ export type Location = {
     category: LocationCategory,
     creator: Creator,
     country: Country,
+    shortDescription: string
 }
