@@ -1,4 +1,31 @@
-.horizontalList{
+.verticalList {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.descriptionText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  width: 100%;
+}
+
+.verticalLocation {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.horizontalList {
   padding: 10px;
   display: flex;
   gap: 20px;
@@ -6,41 +33,49 @@
   white-space: nowrap;
 }
 
-.smallTitle{
+.smallTitle {
   color: #d4d4d4;
 }
 
-.productTitle{
-   font-weight: bolder;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   width: 130px;
-   text-align: center;
+.productTitle {
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 130px;
+  text-align: center;
+  font-size: 22px;
 }
 
-.imageContainer{
-    width: 80px;
-    height: 80px;
+.imageContainer {
+  width: 80px;
+  height: 80px;
 }
 
-.locationContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 180px;
-    cursor: pointer;
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
 }
+
 
 @media screen and (max-width: 767px) {
-    .imageContainer{
-        width: 60px;
-        height: 60px;
-    }
-    .locationContainer{
-        width: 140px;
-        height:140px;
-    }
+  .imageContainer {
+    width: 60px;
+    height: 60px;
+  }
+  .locationContainer {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .descriptionText {
+    display: none;
+  }
 }
