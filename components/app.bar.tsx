@@ -10,8 +10,6 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import ButtonContainer from "./button.container";
 import category from "../public/images/category.png";
 import cart from "../public/images/cart.png";
-import bell from "../public/images/notification.png";
-import user from "../public/images/user.png";
 import {useRouter} from "next/router";
 import {useRecoilState} from "recoil";
 import {PreviewState} from "../atoms/preview.state";
