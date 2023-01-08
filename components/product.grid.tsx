@@ -3,7 +3,8 @@ import styles from "../styles/product.module.scss";
 import {useProductList} from "../swrHooks/product.hooks";
 import {ProductContainer} from "./product.container";
 import Spinner from "./spinner";
-import NoProducts from "./no.products";
+import NoItems from "./no.items";
+import stock from "../public/images/stock.png";
 
 type ProductGridProps = {
     url: string;
@@ -27,7 +28,9 @@ const ProductGrid = ({url}: { url: string }) => {
             {
                 products?.length! < 1 ?
                     <div>
-                        <NoProducts errorMessage={`Desole nous n'avons pas encore de produit de cette categorie\n.
+                        <NoItems
+                            iconImage={stock}
+                            errorMessage={`Desole nous n'avons pas encore de produit de cette categorie\n.
                 Nous travaillons tres dure pour ameliorer nos services.\n Svp reessayez plutard.`}/>
                     </div> :
                     <div className={styles.productGrid}>
