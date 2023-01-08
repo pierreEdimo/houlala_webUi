@@ -3,24 +3,23 @@ import React from "react" ;
 import styles from "../styles/sub.category.module.scss";
 import {Card} from "./card";
 import Avatar from "./avatar";
-import Link from "next/link";
 
 type SubCategoryContainerProps = {
-    subCategory: SubCategory
+    label: string;
+    thumbNailUrl: string;
+    onClick: () => void
 }
 
-const SubCategoryContainer: React.FC<SubCategoryContainerProps> = ({subCategory}: { subCategory: SubCategory }) => {
+const SubCategoryContainer: React.FC<SubCategoryContainerProps> = ({label, thumbNailUrl, onClick}) => {
     return (
         <>
             <Card>
-                <Link href={`/sub-category/${subCategory._id}`}>
-                    <div className={styles.subCategoryContainer}>
-                        <div className={styles.imageThumbnail}>
-                            <Avatar imageUrl={subCategory.thumbNailUrl} type={"avatar"}/>
-                        </div>
-                        <h3>{subCategory.label}</h3>
+                <div onClick={onClick} className={styles.subCategoryContainer}>
+                    <div className={styles.imageThumbnail}>
+                        <Avatar imageUrl={thumbNailUrl} type={"avatar"}/>
                     </div>
-                </Link>
+                    <h3>{label}</h3>
+                </div>
             </Card>
         </>
     )
