@@ -16,7 +16,8 @@ const BackButton: React.FC<BackButtonProps> = ({title}: { title: string }) => {
                 style={{
                     display: "flex",
                     gap: "10px",
-                    alignItems: "center",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
                     cursor: "pointer"
                 }}>
                 <FontAwesomeIcon icon={faChevronLeft} style={{fontSize: "20px"}}/>
