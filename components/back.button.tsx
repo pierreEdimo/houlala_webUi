@@ -16,7 +16,7 @@ const BackButton: React.FC<BackButtonProps> = ({title}: { title: string }) => {
                 style={{
                     display: "flex",
                     gap: "10px",
-                    alignItems: "flex-start",
+                    alignItems: "center",
                     justifyContent: "flex-start",
                     cursor: "pointer"
                 }}>
