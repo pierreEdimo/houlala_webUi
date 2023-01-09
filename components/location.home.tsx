@@ -20,7 +20,7 @@ const LocationHome: React.FC<LocationHomeProps> = ({location}) => {
                 {location?.shortDescription!}
             </ReactMarkdown>
             <div style={{height: "20px"}}></div>
-            <h2>Recemment ajoutee</h2>
+            <h2>{`Quelques produit par ${location.name}`}</h2>
             <ProductGrid url={`${PRODUCT_URL}/random/location/${location?.uniqueIdentifier}?size=20`}/>
         </>
     )
